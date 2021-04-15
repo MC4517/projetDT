@@ -8,11 +8,11 @@ jnr = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@gael
 
 
     puts "Combien y a t-il de handle Twitter dans cette array ?"
-    puts  jnr.min {|a, b| a.length <=> b.length} 
+    puts  jnr.length
     puts ""
 
     puts "Quel est le handle le plus court dans cette liste ?"
-    puts  "> Le handle le plus court est : " + jnr.min + "."
+    puts  "> Le handle le plus court est : " + jnr.min {|a, b| a.length <=> b.length} + "."
     puts""
 
     puts "Combien y-a-t'il de handle contenant 5 caractères ?"
@@ -46,6 +46,7 @@ jnr = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@gael
     puts "Répartition par taille des handles"
     print "Nombre de handle avec 1 caractère : "
     puts jnr.count { |w| w.length == 1 }
+
     print "Nombre de handle avec 2 caractères : "
     puts jnr.count { |w| w.length == 2 }
     print "Nombre de handle avec 3 caractères : "
